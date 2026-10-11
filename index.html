@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Consulta tu resumen de pedido, cambia tu plan y administra tu compra."
+    >
+
+    <title>Resumen del pedido</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="card">
+
+            <!-- Imagen principal -->
+            <img
+                src="images/illustration-hero.svg"
+                alt="Ilustración de una persona escuchando música"
+                class="hero-image"
+            >
+
+            <div class="content">
+
+                <h1>Resumen del pedido</h1>
+
+                <p class="description">
+                    Ahora puedes escuchar millones de canciones,
+                    audiolibros y pódcast en cualquier dispositivo
+                    y desde cualquier lugar.
+                </p>
+
+                <!-- INFORMACIÓN DEL PLAN -->
+                <div class="plan">
+
+                    <img
+                        src="images/icon-music.svg"
+                        alt="Icono de música"
+                        class="music-icon"
+                    >
+
+                    <div class="plan-info">
+                        <h2 id="plan-name">Plan anual</h2>
+                        <p id="plan-price">$59.99/año</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="change"
+                        id="change-button"
+                    >
+                        Cambiar plan
+                    </button>
+
+                </div>
+
+                <!-- BOTÓN DE PAGO -->
+                <button
+                    type="button"
+                    class="payment-button"
+                    id="payment-button"
+                >
+                    Continuar al pago
+                </button>
+
+                <!-- BOTÓN PARA CANCELAR EL PEDIDO -->
+                <button
+                    type="button"
+                    class="cancel"
+                    id="cancel-button"
+                >
+                    Cancelar pedido
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =================================
+         VENTANA PARA CAMBIAR EL PLAN
+         ================================= -->
+
+    <div
+        class="modal"
+        id="plan-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="plan-modal-title"
+        aria-hidden="true"
+    >
+
+        <div class="modal-content">
+
+            <h2 id="plan-modal-title">Selecciona tu plan</h2>
+
+            <p>Elige el plan que mejor se adapte a tus necesidades.</p>
+
+            <label class="plan-option">
+
+                <input
+                    type="radio"
+                    name="plan"
+                    value="annual"
+                    checked
+                >
+
+                <span>
+                    <strong>Plan anual</strong>
+                    <small>$59.99 al año</small>
+                </span>
+
+            </label>
+
+            <label class="plan-option">
+
+                <input
+                    type="radio"
+                    name="plan"
+                    value="monthly"
+                >
+
+                <span>
+                    <strong>Plan mensual</strong>
+                    <small>$9.99 al mes</small>
+                </span>
+
+            </label>
+
+            <div class="modal-buttons">
+
+                <button
+                    type="button"
+                    id="select-plan"
+                >
+                    Confirmar plan
+                </button>
+
+                <button
+                    type="button"
+                    id="close-plan"
+                >
+                    Volver
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         VENTANA DE PAGO
+         ================================= -->
+
+    <div
+        class="modal"
+        id="payment-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="payment-modal-title"
+        aria-hidden="true"
+    >
+
+        <div class="modal-content">
+
+            <h2 id="payment-modal-title">Realizar el pago</h2>
+
+            <p>Resumen de tu compra:</p>
+
+            <p class="payment-summary">
+
+                <strong id="payment-plan">Plan anual</strong>
+
+                <span id="payment-price">$59.99/año</span>
+
+            </p>
+
+            <form id="payment-form">
+
+                <label for="card-number">
+                    Número de tarjeta
+
+                    <input
+                        type="text"
+                        id="card-number"
+                        placeholder="1234 5678 9012 3456"
+                        maxlength="19"
+                        inputmode="numeric"
+                        autocomplete="cc-number"
+                        required
+                    >
+                </label>
+
+                <div class="payment-row">
+
+                    <label>
+                        Fecha de vencimiento
+
+                        <input
+                            type="text"
+                            id="card-expiration"
+                            placeholder="MM/AA"
+                            maxlength="5"
+                            autocomplete="cc-exp"
+                            required
+                        >
+                    </label>
+
+                    <label>
+                        Código de seguridad
+
+                        <input
+                            type="password"
+                            id="card-cvv"
+                            placeholder="123"
+                            maxlength="4"
+                            inputmode="numeric"
+                            autocomplete="cc-csc"
+                            required
+                        >
+                    </label>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="pay-button"
+                >
+                    Confirmar pago
+                </button>
+
+            </form>
+
+            <button
+                type="button"
+                class="close-payment"
+                id="close-payment"
+            >
+                Volver al pedido
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         VENTANA PARA CANCELAR EL PEDIDO
+         ================================= -->
+
+    <div
+        class="modal"
+        id="cancel-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cancel-modal-title"
+        aria-describedby="cancel-modal-description"
+        aria-hidden="true"
+    >
+
+        <div class="modal-content">
+
+            <h2 id="cancel-modal-title">¿Cancelar el pedido?</h2>
+
+            <p id="cancel-modal-description">
+                ¿Estás seguro de que deseas cancelar tu pedido?
+                Si continúas, se cancelará la selección actual
+                de tu plan.
+            </p>
+
+            <div class="modal-buttons">
+
+                <button
+                    type="button"
+                    id="confirm-cancel"
+                >
+                    Sí, cancelar pedido
+                </button>
+
+                <button
+                    type="button"
+                    id="keep-order"
+                >
+                    No, conservar pedido
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         VENTANA DE CANCELACIÓN CONFIRMADA
+         ================================= -->
+
+    <div
+        class="modal"
+        id="cancel-success-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cancel-success-title"
+        aria-describedby="cancel-success-description"
+        aria-hidden="true"
+    >
+
+        <div class="modal-content">
+
+            <h2 id="cancel-success-title">Pedido cancelado</h2>
+
+            <p id="cancel-success-description">
+                La cancelación se ha realizado correctamente.
+            </p>
+
+            <div class="modal-buttons">
+
+                <button
+                    type="button"
+                    id="close-cancel-success"
+                >
+                    Entendido
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

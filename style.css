@@ -1,0 +1,698 @@
+/* ==============================
+   CONFIGURACIÓN GENERAL
+   ============================== */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background-color: #e0e8ff;
+    background-image: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+   ============================== */
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==============================
+   TARJETA
+   ============================== */
+
+.card {
+    width: 450px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 20px 40px rgba(56, 41, 224, 0.15);
+}
+
+
+/* ==============================
+   IMAGEN PRINCIPAL
+   ============================== */
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* ==============================
+   CONTENIDO
+   ============================== */
+
+.content {
+    padding: 40px 48px 48px;
+    text-align: center;
+}
+
+.content h1 {
+    color: #1f2f56;
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+
+/* ==============================
+   DESCRIPCIÓN
+   ============================== */
+
+.description {
+    color: #7280a7;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* ==============================
+   PLAN
+   ============================== */
+
+.plan {
+    width: 100%;
+    background-color: #f5f7ff;
+    border-radius: 12px;
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 32px;
+}
+
+/* Icono de música */
+
+.music-icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 18px;
+}
+
+
+/* Información del plan */
+
+.plan-info {
+    text-align: left;
+    flex: 1;
+}
+
+.plan-info h2 {
+    color: #1f2f56;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.plan-info p {
+    color: #7280a7;
+    font-size: 15px;
+}
+
+
+/* ==============================
+   BOTÓN CHANGE
+   ============================== */
+
+.change {
+    color: #3829e0;
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: color 0.2s ease;
+}
+
+.change:hover {
+    color: #766cf1;
+    text-decoration: none;
+}
+
+
+/* ==============================
+   BOTÓN DE PAGO
+   ============================== */
+
+.payment-button {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+
+    padding: 16px;
+
+    background-color: #3829e0;
+    color: white;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 20px rgba(56, 41, 224, 0.25);
+
+    transition: 0.2s;
+}
+.payment-button:hover {
+    background-color: #766cf1;
+}
+
+
+/* ==============================
+   CANCELAR PEDIDO
+   ============================== */
+
+.cancel {
+    display: block;
+
+    margin-top: 28px;
+
+    color: #7280a7;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+.cancel:hover {
+    color: #1f2f56;
+}
+/* =========================
+   RESPONSIVE - MOBILE
+   ========================= */
+
+/* =========================
+   RESPONSIVE - MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+
+        background-image: url("images/pattern-background-mobile.svg");
+        background-size: 100% auto;
+        background-position: top center;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+
+        border-radius: 18px;
+    }
+
+    .content {
+        padding: 32px 24px 36px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .description {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+
+    .plan {
+        padding: 16px;
+        margin-bottom: 28px;
+    }
+
+    .music-icon {
+        width: 45px;
+        height: 45px;
+        margin-right: 14px;
+    }
+
+    .plan-info h2 {
+        font-size: 15px;
+    }
+
+    .plan-info p {
+        font-size: 14px;
+    }
+
+    .change {
+        font-size: 13px;
+    }
+
+    .payment-button {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .cancel {
+        margin-top: 26px;
+        font-size: 14px;
+    }
+
+} /* ← AQUÍ TERMINA EL @media */
+
+
+/* =========================
+   MODALES
+   ========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(31, 47, 86, 0.6);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+
+/* Mostrar modal */
+
+.modal.show {
+    display: flex;
+}
+
+
+/* =========================
+   CONTENIDO DEL MODAL
+   ========================= */
+
+.modal-content {
+    width: 400px;
+    max-width: 90%;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    color: #1f2f56;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   OPCIONES DE PLAN
+   ========================= */
+
+.plan-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    background-color: #f5f7ff;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.plan-option input {
+    width: 18px;
+    height: 18px;
+}
+
+.plan-option span {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.plan-option strong {
+    color: #1f2f56;
+}
+
+.plan-option small {
+    color: #7280a7;
+}
+
+
+/* =========================
+   BOTONES DEL MODAL
+   ========================= */
+
+.modal-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.modal-buttons button {
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 700;
+}
+
+#select-plan {
+    background-color: #3829e0;
+    color: white;
+}
+
+#select-plan:hover {
+    background-color: #766cf1;
+}
+
+#close-plan {
+    background-color: #e0e8ff;
+    color: #1f2f56;
+}
+
+#close-plan:hover {
+    background-color: #d2d9f5;
+}
+
+
+/* =========================
+   PAGO
+   ========================= */
+
+.payment-summary {
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: #7280a7;
+}
+
+.payment-summary strong {
+    color: #1f2f56;
+
+    margin-right: 8px;
+}
+
+
+/* =========================
+   FORMULARIO
+   ========================= */
+
+#payment-form label {
+    display: block;
+
+    color: #1f2f56;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+#payment-form input {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 7px;
+
+    border: 1px solid #d5daf0;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+#payment-form input:focus {
+    border-color: #3829e0;
+}
+
+
+/* =========================
+   CAMPOS DE PAGO
+   ========================= */
+
+.payment-row {
+    display: flex;
+
+    gap: 15px;
+}
+
+.payment-row label {
+    flex: 1;
+}
+
+
+/* =========================
+   BOTÓN PAY NOW
+   ========================= */
+
+.pay-button {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #3829e0;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.pay-button:hover {
+    background-color: #766cf1;
+}
+
+
+/* =========================
+   CANCELAR PAGO
+   ========================= */
+
+.close-payment {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: #7280a7;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.close-payment:hover {
+    color: #1f2f56;
+}
+```css
+/* ========================================
+   MEJORA DE VENTANAS DE CONFIRMACIÓN
+   ======================================== */
+
+/* Contenido general de las ventanas */
+
+.modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: aparecer-modal 0.22s ease-out;
+}
+
+.modal-content > p {
+    color: #7280a7;
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+/* Animación de entrada */
+
+@keyframes aparecer-modal {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ========================================
+   BOTONES DE LAS VENTANAS EMERGENTES
+   ======================================== */
+
+.modal-buttons button {
+    min-height: 44px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.modal-buttons button:hover {
+    transform: translateY(-1px);
+}
+
+.modal-buttons button:active {
+    transform: translateY(0);
+}
+
+/* Confirmar cancelación */
+
+#confirm-cancel {
+    background-color: #c62828;
+    color: #ffffff;
+}
+
+#confirm-cancel:hover {
+    background-color: #a61f1f;
+}
+
+/* Conservar pedido */
+
+#keep-order {
+    background-color: #e0e8ff;
+    color: #1f2f56;
+}
+
+#keep-order:hover {
+    background-color: #d2d9f5;
+}
+
+/* Cerrar mensaje de cancelación */
+
+#close-cancel-success {
+    background-color: #3829e0;
+    color: #ffffff;
+}
+
+#close-cancel-success:hover {
+    background-color: #766cf1;
+}
+
+/* ========================================
+   ESTADOS DE FOCO PARA ACCESIBILIDAD
+   ======================================== */
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #766cf1;
+    outline-offset: 3px;
+}
+
+/* ========================================
+   AJUSTES PARA PANTALLAS PEQUEÑAS
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .modal {
+        padding: 16px;
+    }
+
+    .modal-content {
+        width: 100%;
+        max-width: 400px;
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    .modal-content h2 {
+        font-size: 22px;
+        line-height: 1.35;
+        margin-bottom: 18px;
+    }
+
+    .modal-content > p {
+        font-size: 14px;
+    }
+
+    .modal-buttons {
+        gap: 10px;
+        margin-top: 22px;
+    }
+
+    .modal-buttons button {
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+
+    .payment-row {
+        gap: 10px;
+    }
+
+}
