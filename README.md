@@ -1,104 +1,213 @@
-# Frontend Mentor - Order summary card
+# Mi Tienda Online
 
-![Design preview for the Order summary card coding challenge](preview.jpg)
+Aplicación web desarrollada con HTML, CSS y JavaScript que permite visualizar un resumen de pedido, seleccionar planes, consultar productos mediante una API y simular el proceso de compra y cancelación.
 
-## Welcome! ðŸ‘‹
+## Descripción del proyecto
 
-Thanks for checking out this front-end coding challenge.
+Mi Tienda Online es un proyecto práctico de desarrollo web orientado a aplicar los fundamentos de la programación frontend. La aplicación ofrece una interfaz para consultar información de productos, gestionar una selección de compra y recorrer diferentes etapas de un proceso de pedido.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+El proyecto se desarrolló progresivamente, comenzando con la estructura de la página y avanzando hacia la incorporación de estilos, interactividad, ventanas modales y publicación en internet.
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+**Importante:** el proceso de pago es simulado. La aplicación no procesa transacciones bancarias reales.
 
-## The challenge
+## Objetivos
 
-Your challenge is to build out this order summary card component and get it looking as close to the design as possible.
+- Construir una interfaz web clara y fácil de utilizar.
+- Aplicar HTML para estructurar el contenido.
+- Utilizar CSS para diseñar la interfaz y adaptarla a diferentes tamaños de pantalla.
+- Implementar JavaScript para gestionar eventos e interacciones.
+- Consultar productos mediante una API.
+- Practicar el uso de Git y GitHub para el control de versiones.
+- Publicar la aplicación utilizando Vercel.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## Tecnologías utilizadas
 
-Your users should be able to:
+| Tecnología | Uso |
+|---|---|
+| HTML5 | Estructura y contenido de la página. |
+| CSS3 | Diseño visual, distribución de elementos y adaptación a dispositivos. |
+| JavaScript | Eventos, selección de planes, gestión del pedido, ventanas modales y validaciones. |
+| API | Consulta de productos disponibles. |
+| Git | Control de versiones del proyecto. |
+| GitHub | Almacenamiento y administración del código fuente. |
+| Vercel | Despliegue y publicación de la aplicación web. |
 
-- See hover states for interactive elements
+## Desarrollo del proyecto paso a paso
 
-### Want some support on the challenge? 
+### Paso 1. Creación de la estructura HTML
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+Se creó el archivo `index.html`, encargado de definir la estructura principal de la aplicación.
 
-## Where to find everything
+En esta etapa se organizaron los elementos de la interfaz, incluyendo:
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+- Resumen del pedido.
+- Información del plan seleccionado.
+- Botones para modificar el plan y continuar con la compra.
+- Sección para consultar productos.
+- Ventanas modales para seleccionar el plan, realizar el pago y cancelar el pedido.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+### Paso 2. Diseño de la interfaz con CSS
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+Se creó el archivo `style.css` para establecer la presentación visual de la aplicación.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+Se trabajaron aspectos como:
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Colores, tipografía y espaciado.
+- Distribución de los elementos.
+- Apariencia de los botones.
+- Diseño de las ventanas modales.
+- Formularios y campos de entrada.
+- Adaptación de la interfaz a diferentes tamaños de pantalla.
 
-## Using AI coding assistants
+### Paso 3. Incorporación de funcionalidades con JavaScript
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+Se creó el archivo `script.js` para dar interactividad a la aplicación.
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stageâ€”offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+Se implementaron funciones para:
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partnerâ€”guiding you toward solutions rather than just giving you the answers.
+- Abrir y cerrar ventanas modales.
+- Seleccionar entre un plan anual y uno mensual.
+- Mostrar la información del plan elegido.
+- Consultar productos mediante una API.
+- Actualizar la información del pedido y los valores mostrados.
+- Validar los campos del formulario de pago.
+- Confirmar o cancelar el pedido.
+- Mostrar mensajes de confirmación al usuario.
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+### Paso 4. Implementación de la cancelación del pedido
 
-## Building your project
+Se incorporó un flujo de cancelación para evitar que el usuario cancele accidentalmente su pedido.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+El proceso contempla los siguientes pasos:
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+1. El usuario selecciona la opción de cancelar el pedido.
+2. La aplicación muestra una ventana de confirmación.
+3. El usuario puede confirmar la cancelación o conservar el pedido.
+4. Si confirma, se muestra un mensaje indicando que la cancelación se realizó correctamente.
 
-## Deploying your project
+### Paso 5. Simulación del proceso de compra
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+Se creó una ventana de pago con un resumen de la compra y campos para ingresar datos de prueba.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+La interfaz permite recorrer el flujo de confirmación, pero no está conectada a una pasarela de pagos ni realiza cobros reales.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
+**Recomendación:** utilizar únicamente información ficticia al probar el formulario.
 
-## Create a custom `README.md`
+### Paso 6. Organización del código
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+Se separaron las responsabilidades principales en tres archivos:
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+- `index.html`: estructura y contenido.
+- `style.css`: presentación visual.
+- `script.js`: comportamiento e interactividad.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+Esta organización facilita el mantenimiento, la identificación de errores y la incorporación de nuevas funcionalidades.
 
-## Submitting your solution
+### Paso 7. Control de versiones con Git
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
+Se utilizó Git para registrar los cambios realizados durante el desarrollo.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+Los comandos principales utilizados para administrar el proyecto son:
 
-## Sharing your solution
+```bash
+git status
+git add .
+git commit -m "Describe el cambio realizado"
+git push
+```
 
-There are multiple places you can share your solution:
+Estos comandos permiten revisar los cambios, prepararlos, crear una versión y enviarla al repositorio remoto.
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community).
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+### Paso 8. Publicación en GitHub
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
+El código fuente se almacenó en un repositorio de GitHub para mantener una copia remota del proyecto y facilitar su seguimiento.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+Repositorio: [Mi Tienda Online en GitHub](https://github.com/jadantex/mi-tienda-online)
 
-## Got feedback for us?
+### Paso 9. Despliegue con Vercel
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+Se conectó el repositorio de GitHub con Vercel para publicar la aplicación web.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+El flujo de publicación consiste en:
 
-**Have fun building!** ðŸš€
+1. Realizar cambios en los archivos del proyecto.
+2. Registrar los cambios con Git.
+3. Enviar los cambios a GitHub.
+4. Permitir que Vercel detecte el nuevo commit.
+5. Verificar el resultado del despliegue.
+6. Abrir la URL pública para comprobar el funcionamiento de la aplicación.
+
+## Estructura del proyecto
+
+```text
+mi-tienda-online/
++-- images/
+¦   +-- favicon-32x32.png
+¦   +-- icon-music.svg
+¦   +-- illustration-hero.svg
+¦   +-- pattern-background-desktop.svg
+¦   +-- pattern-background-mobile.svg
++-- .gitignore
++-- index.html
++-- script.js
++-- style.css
++-- README.md
+```
+
+La carpeta `images` contiene los recursos gráficos del proyecto. Los archivos HTML, CSS y JavaScript conforman la aplicación principal.
+
+## Cómo ejecutar el proyecto localmente
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/jadantex/mi-tienda-online.git
+```
+
+2. Ingresar a la carpeta:
+
+```bash
+cd mi-tienda-online
+```
+
+3. Abrir la carpeta en Visual Studio Code:
+
+```bash
+code .
+```
+
+4. Abrir `index.html` en un navegador. También se puede utilizar la extensión Live Server de Visual Studio Code para ejecutar la página durante el desarrollo.
+
+## Pruebas recomendadas
+
+Antes de publicar una nueva versión, se recomienda comprobar:
+
+- Que la página cargue correctamente.
+- Que los botones respondan a las acciones del usuario.
+- Que se pueda seleccionar y modificar el plan.
+- Que la consulta de productos muestre los estados correspondientes.
+- Que el usuario pueda confirmar o cancelar el pedido.
+- Que los formularios validen los campos obligatorios.
+- Que las ventanas modales se puedan cerrar correctamente.
+- Que la interfaz funcione en pantallas de diferentes tamaños.
+- Que el despliegue de Vercel termine correctamente.
+
+## Mejoras futuras
+
+Entre las posibles mejoras se encuentran:
+
+- Persistencia del carrito entre sesiones.
+- Incorporación de un catálogo con productos propios.
+- Implementación de un backend y una base de datos.
+- Autenticación de usuarios.
+- Integración de una pasarela de pagos real mediante un proveedor autorizado.
+- Pruebas automatizadas.
+- Mejoras de accesibilidad y experiencia de usuario.
+
+## Autor
+
+Proyecto desarrollado como ejercicio práctico de desarrollo web, utilizando tecnologías frontend y herramientas de control de versiones y despliegue.
+
+---
+
+**Estado del proyecto:** aplicación web frontend con funcionalidades interactivas y proceso de compra simulado.
