@@ -1,698 +1,687 @@
-/* ==============================
-   CONFIGURACIÓN GENERAL
-   ============================== */
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+/* ==========================================
+   MI TIENDA ONLINE
+   Diseño general
+========================================== */
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4338ca;
+    --primary-hover: #3730a3;
+    --background: #f3f5fb;
+    --surface: #ffffff;
+    --text: #1f2937;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --danger: #dc2626;
+    --shadow: 0 8px 25px rgba(31, 41, 55, 0.08);
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-
     min-height: 100vh;
-
-    background-color: #e0e8ff;
-    background-image: url("images/pattern-background-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 50%;
-
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.5;
 }
 
-/* ==============================
-   CONTENEDOR PRINCIPAL
-   ============================== */
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+.main-header {
+    width: 100%;
+    padding: 30px 24px;
+    color: white;
+    background: linear-gradient(135deg, #4338ca, #6366f1);
+    box-shadow: 0 4px 15px rgba(67, 56, 202, 0.18);
+}
+
+.header-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header-content h1 {
+    margin-bottom: 5px;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.header-content p {
+    color: #e0e7ff;
+    font-size: 15px;
+}
+
+/* ==========================================
+   CONTENIDO PRINCIPAL
+========================================== */
 
 .container {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* ==============================
-   TARJETA
-   ============================== */
-
-.card {
-    width: 450px;
-    background-color: white;
-    border-radius: 20px;
-    overflow: hidden;
-
-    box-shadow: 0 20px 40px rgba(56, 41, 224, 0.15);
-}
-
-
-/* ==============================
-   IMAGEN PRINCIPAL
-   ============================== */
-
-.hero-image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-
-/* ==============================
-   CONTENIDO
-   ============================== */
-
-.content {
-    padding: 40px 48px 48px;
-    text-align: center;
-}
-
-.content h1 {
-    color: #1f2f56;
-    font-size: 28px;
-    font-weight: 900;
-    margin-bottom: 16px;
-}
-
-/* ==============================
-   DESCRIPCIÓN
-   ============================== */
-
-.description {
-    color: #7280a7;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-/* ==============================
-   PLAN
-   ============================== */
-
-.plan {
-    width: 100%;
-    background-color: #f5f7ff;
-    border-radius: 12px;
-    padding: 18px 20px;
-
-    display: flex;
-    align-items: center;
-
-    margin-bottom: 32px;
-}
-
-/* Icono de música */
-
-.music-icon {
-    width: 48px;
-    height: 48px;
-    margin-right: 18px;
-}
-
-
-/* Información del plan */
-
-.plan-info {
-    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.8fr);
+    align-items: start;
+    gap: 28px;
     flex: 1;
 }
 
-.plan-info h2 {
-    color: #1f2f56;
-    font-size: 16px;
-    margin-bottom: 6px;
+/* Tarjetas principales */
+
+.products-section,
+.cart-section {
+    min-width: 0;
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
 }
 
-.plan-info p {
-    color: #7280a7;
-    font-size: 15px;
+.products-section h2,
+.cart-section h2 {
+    margin-bottom: 8px;
+    color: var(--text);
+    font-size: 23px;
+    line-height: 1.3;
 }
 
-
-/* ==============================
-   BOTÓN CHANGE
-   ============================== */
-
-.change {
-    color: #3829e0;
-    font-size: 14px;
-    font-weight: bold;
-
-    transition: color 0.2s ease;
-}
-
-.change:hover {
-    color: #766cf1;
-    text-decoration: none;
-}
-
-
-/* ==============================
-   BOTÓN DE PAGO
-   ============================== */
-
-.payment-button {
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-
-    padding: 16px;
-
-    background-color: #3829e0;
-    color: white;
-
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    box-shadow: 0 10px 20px rgba(56, 41, 224, 0.25);
-
-    transition: 0.2s;
-}
-.payment-button:hover {
-    background-color: #766cf1;
-}
-
-
-/* ==============================
-   CANCELAR PEDIDO
-   ============================== */
-
-.cancel {
-    display: block;
-
-    margin-top: 28px;
-
-    color: #7280a7;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    text-decoration: none;
-}
-.cancel:hover {
-    color: #1f2f56;
-}
-/* =========================
-   RESPONSIVE - MOBILE
-   ========================= */
-
-/* =========================
-   RESPONSIVE - MOBILE
-   ========================= */
-
-@media (max-width: 600px) {
-
-    body {
-        padding: 20px;
-
-        background-image: url("images/pattern-background-mobile.svg");
-        background-size: 100% auto;
-        background-position: top center;
-    }
-
-    .container {
-        width: 100%;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 400px;
-
-        border-radius: 18px;
-    }
-
-    .content {
-        padding: 32px 24px 36px;
-    }
-
-    .content h1 {
-        font-size: 24px;
-        margin-bottom: 16px;
-    }
-
-    .description {
-        font-size: 15px;
-        line-height: 1.6;
-        margin-bottom: 24px;
-    }
-
-    .plan {
-        padding: 16px;
-        margin-bottom: 28px;
-    }
-
-    .music-icon {
-        width: 45px;
-        height: 45px;
-        margin-right: 14px;
-    }
-
-    .plan-info h2 {
-        font-size: 15px;
-    }
-
-    .plan-info p {
-        font-size: 14px;
-    }
-
-    .change {
-        font-size: 13px;
-    }
-
-    .payment-button {
-        padding: 15px;
-        font-size: 14px;
-    }
-
-    .cancel {
-        margin-top: 26px;
-        font-size: 14px;
-    }
-
-} /* ← AQUÍ TERMINA EL @media */
-
-
-/* =========================
-   MODALES
-   ========================= */
-
-.modal {
-    display: none;
-
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(31, 47, 86, 0.6);
-
-    justify-content: center;
-    align-items: center;
-
-    z-index: 1000;
-}
-
-
-/* Mostrar modal */
-
-.modal.show {
-    display: flex;
-}
-
-
-/* =========================
-   CONTENIDO DEL MODAL
-   ========================= */
-
-.modal-content {
-    width: 400px;
-    max-width: 90%;
-
-    background-color: white;
-
-    border-radius: 15px;
-
-    padding: 30px;
-
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.modal-content h2 {
-    color: #1f2f56;
-
-    text-align: center;
-
-    margin-bottom: 25px;
-}
-
-
-/* =========================
-   OPCIONES DE PLAN
-   ========================= */
-
-.plan-option {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    padding: 15px;
-
-    margin-bottom: 12px;
-
-    background-color: #f5f7ff;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-}
-
-.plan-option input {
-    width: 18px;
-    height: 18px;
-}
-
-.plan-option span {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 5px;
-}
-
-.plan-option strong {
-    color: #1f2f56;
-}
-
-.plan-option small {
-    color: #7280a7;
-}
-
-
-/* =========================
-   BOTONES DEL MODAL
-   ========================= */
-
-.modal-buttons {
-    display: flex;
-
-    gap: 10px;
-
-    margin-top: 25px;
-}
-
-.modal-buttons button {
-    flex: 1;
-
-    padding: 12px;
-
-    border: none;
-
-    border-radius: 8px;
-
-    cursor: pointer;
-
-    font-family: inherit;
-
-    font-weight: 700;
-}
-
-#select-plan {
-    background-color: #3829e0;
-    color: white;
-}
-
-#select-plan:hover {
-    background-color: #766cf1;
-}
-
-#close-plan {
-    background-color: #e0e8ff;
-    color: #1f2f56;
-}
-
-#close-plan:hover {
-    background-color: #d2d9f5;
-}
-
-
-/* =========================
-   PAGO
-   ========================= */
-
-.payment-summary {
-    text-align: center;
-
+.section-description {
     margin-bottom: 20px;
-
-    color: #7280a7;
-}
-
-.payment-summary strong {
-    color: #1f2f56;
-
-    margin-right: 8px;
-}
-
-
-/* =========================
-   FORMULARIO
-   ========================= */
-
-#payment-form label {
-    display: block;
-
-    color: #1f2f56;
-
+    color: var(--muted);
     font-size: 14px;
+}
 
+.status-message {
+    margin: 14px 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+button {
+    font: inherit;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 3px;
+}
+
+.payment-button,
+.add-cart-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 12px 18px;
+    color: white;
     font-weight: 700;
-
-    margin-bottom: 15px;
+    background: var(--primary);
+    border: none;
+    border-radius: 9px;
+    box-shadow: 0 4px 10px rgba(67, 56, 202, 0.15);
 }
 
-#payment-form input {
-    width: 100%;
-
-    padding: 12px;
-
-    margin-top: 7px;
-
-    border: 1px solid #d5daf0;
-
-    border-radius: 7px;
-
-    font-family: inherit;
-
-    font-size: 14px;
-
-    outline: none;
+.payment-button:hover:not(:disabled),
+.add-cart-button:hover:not(:disabled) {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
 }
 
-#payment-form input:focus {
-    border-color: #3829e0;
+.products-section > .payment-button {
+    margin-bottom: 4px;
 }
 
+/* ==========================================
+   CATÁLOGO
+========================================== */
 
-/* =========================
-   CAMPOS DE PAGO
-   ========================= */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
 
-.payment-row {
+.product-card {
     display: flex;
-
-    gap: 15px;
+    flex-direction: column;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: white;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.payment-row label {
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(31, 41, 55, 0.08);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    margin-bottom: 12px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #f8fafc;
+}
+
+.product-card h3 {
+    margin-bottom: 8px;
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.product-card > p:not(.product-price) {
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
     flex: 1;
 }
 
-
-/* =========================
-   BOTÓN PAY NOW
-   ========================= */
-
-.pay-button {
-    width: 100%;
-
-    padding: 14px;
-
-    margin-top: 10px;
-
-    border: none;
-
-    border-radius: 8px;
-
-    background-color: #3829e0;
-
-    color: white;
-
-    font-family: inherit;
-
+.product-card .product-price {
+    margin: 0 0 12px;
+    color: var(--primary);
+    font-size: 18px;
     font-weight: 700;
-
-    cursor: pointer;
 }
 
-.pay-button:hover {
-    background-color: #766cf1;
-}
-
-
-/* =========================
-   CANCELAR PAGO
-   ========================= */
-
-.close-payment {
+.add-cart-button {
     width: 100%;
-
-    padding: 12px;
-
-    margin-top: 10px;
-
-    border: none;
-
-    background-color: transparent;
-
-    color: #7280a7;
-
-    font-family: inherit;
-
-    font-weight: 700;
-
-    cursor: pointer;
+    margin-top: auto;
+    padding: 10px;
+    font-size: 13px;
 }
 
-.close-payment:hover {
-    color: #1f2f56;
-}
-```css
-/* ========================================
-   MEJORA DE VENTANAS DE CONFIRMACIÓN
-   ======================================== */
+/* ==========================================
+   CARRITO
+========================================== */
 
-/* Contenido general de las ventanas */
-
-.modal-content {
-    max-height: 90vh;
-    overflow-y: auto;
-    animation: aparecer-modal 0.22s ease-out;
+.cart-section {
+    position: sticky;
+    top: 20px;
 }
 
-.modal-content > p {
-    color: #7280a7;
-    font-size: 15px;
-    line-height: 1.7;
-    text-align: center;
+.cart-section h2 {
+    font-size: 22px;
+}
+
+#cart-status {
     margin-bottom: 18px;
 }
 
-/* Animación de entrada */
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
-@keyframes aparecer-modal {
+.cart-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-item h3 {
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.cart-item p {
+    margin-bottom: 5px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.cart-item .cart-item-subtotal {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.quantity-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.quantity-controls button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    min-height: 34px;
+    padding: 5px 10px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: white;
+    color: var(--text);
+}
+
+.quantity-controls button:hover {
+    background: #f1f5f9;
+}
+
+.quantity-controls span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.quantity-controls .remove-cart-button {
+    margin-left: auto;
+    color: var(--danger);
+    border-color: #fecaca;
+}
+
+.quantity-controls .remove-cart-button:hover {
+    background: #fef2f2;
+}
+
+/* Total */
+
+.cart-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    font-size: 15px;
+}
+
+.cart-total strong {
+    color: var(--primary);
+    font-size: 21px;
+    white-space: nowrap;
+}
+
+/* Acciones del carrito */
+
+.cart-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.cart-actions button {
+    width: 100%;
+    min-height: 44px;
+}
+
+.clear-cart-button {
+    padding: 11px 16px;
+    color: var(--text);
+    font-weight: 700;
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+}
+
+.clear-cart-button:hover:not(:disabled) {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+/* ==========================================
+   VENTANAS MODALES
+========================================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(3px);
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+    animation: modalAppear 0.2s ease;
+}
+
+@keyframes modalAppear {
     from {
         opacity: 0;
-        transform: translateY(12px) scale(0.98);
+        transform: translateY(8px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
     }
 }
 
-/* ========================================
-   BOTONES DE LAS VENTANAS EMERGENTES
-   ======================================== */
+.modal-content h2 {
+    margin-bottom: 10px;
+    font-size: 23px;
+}
 
-.modal-buttons button {
+.modal-content > p {
+    margin-bottom: 20px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    color: var(--muted);
+    font-size: 27px;
+    line-height: 1;
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+}
+
+.close-modal:hover {
+    color: var(--text);
+    background: #f1f5f9;
+}
+
+/* ==========================================
+   RESUMEN DEL PAGO
+========================================== */
+
+.payment-summary {
+    margin-bottom: 24px;
+    padding: 16px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.payment-summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 0;
+    font-size: 14px;
+}
+
+.payment-grand-total {
+    margin-top: 8px;
+    padding-top: 16px;
+    border-top: 1px solid #cbd5e1;
+    font-size: 16px;
+}
+
+.payment-grand-total strong:last-child {
+    color: var(--primary);
+    font-size: 20px;
+}
+
+/* ==========================================
+   FORMULARIO DE COMPRA
+========================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
     min-height: 44px;
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease,
-        transform 0.2s ease;
+    padding: 11px 12px;
+    color: var(--text);
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
 }
 
-.modal-buttons button:hover {
-    transform: translateY(-1px);
+.form-group input:focus {
+    border-color: var(--primary);
 }
 
-.modal-buttons button:active {
-    transform: translateY(0);
+.payment-notice {
+    padding: 12px;
+    color: #475569;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.5;
 }
 
-/* Confirmar cancelación */
-
-#confirm-cancel {
-    background-color: #c62828;
-    color: #ffffff;
+#payment-form > .payment-button {
+    width: 100%;
+    margin-top: 6px;
 }
 
-#confirm-cancel:hover {
-    background-color: #a61f1f;
+/* ==========================================
+   ACCIONES DE LOS MODALES
+========================================== */
+
+.modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
 }
 
-/* Conservar pedido */
-
-#keep-order {
-    background-color: #e0e8ff;
-    color: #1f2f56;
+.modal-actions button {
+    flex: 1;
+    min-height: 44px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 700;
 }
 
-#keep-order:hover {
-    background-color: #d2d9f5;
+.secondary-button {
+    color: var(--text);
+    background: white;
+    border: 1px solid #cbd5e1;
 }
 
-/* Cerrar mensaje de cancelación */
-
-#close-cancel-success {
-    background-color: #3829e0;
-    color: #ffffff;
+.secondary-button:hover {
+    background: #f8fafc;
 }
 
-#close-cancel-success:hover {
-    background-color: #766cf1;
+.cancel-button {
+    color: white;
+    background: var(--danger);
+    border: none;
 }
 
-/* ========================================
-   ESTADOS DE FOCO PARA ACCESIBILIDAD
-   ======================================== */
-
-button:focus-visible,
-input:focus-visible {
-    outline: 3px solid #766cf1;
-    outline-offset: 3px;
+.cancel-button:hover {
+    background: #b91c1c;
 }
 
-/* ========================================
-   AJUSTES PARA PANTALLAS PEQUEÑAS
-   ======================================== */
+#success-modal .payment-button {
+    width: 100%;
+}
 
-@media (max-width: 600px) {
+/* ==========================================
+   PIE DE PÁGINA
+========================================== */
 
-    .modal {
-        padding: 16px;
+.main-footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 22px 20px;
+    color: #64748b;
+    background: white;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 13px;
+}
+
+.main-footer p + p {
+    margin-top: 3px;
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVO
+========================================== */
+
+@media (max-width: 760px) {
+    .container {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 24px 16px;
+        gap: 22px;
+    }
+
+    .products-section,
+    .cart-section {
+        padding: 22px;
+    }
+
+    .cart-section {
+        position: static;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-card {
+        padding: 12px;
+    }
+
+    .product-card img {
+        height: 130px;
+    }
+}
+
+@media (max-width: 420px) {
+    .header-content h1 {
+        font-size: 25px;
+    }
+
+    .products-section,
+    .cart-section {
+        padding: 18px;
+    }
+
+    .products-section h2,
+    .cart-section h2 {
+        font-size: 20px;
+    }
+
+    .products-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    .cart-total {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     .modal-content {
-        width: 100%;
-        max-width: 400px;
-        padding: 24px 20px;
-        border-radius: 16px;
+        padding: 25px 20px;
     }
 
-    .modal-content h2 {
-        font-size: 22px;
-        line-height: 1.35;
-        margin-bottom: 18px;
+    .modal-actions {
+        flex-direction: column;
     }
 
-    .modal-content > p {
-        font-size: 14px;
+    .quantity-controls {
+        gap: 7px;
     }
+}
+/* Encabezado del carrito y contador */
 
-    .modal-buttons {
-        gap: 10px;
-        margin-top: 22px;
-    }
+.cart-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
 
-    .modal-buttons button {
-        padding: 12px 8px;
-        font-size: 13px;
-    }
+.cart-heading h2 {
+    margin-bottom: 0;
+}
 
-    .payment-row {
-        gap: 10px;
-    }
+.cart-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 8px;
+    color: white;
+    background: #4338ca;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+}
 
+/* Mejor presentación del carrito vacío */
+
+#cart-container:empty {
+    min-height: 0;
+}
+
+.cart-status {
+    color: #64748b;
 }
