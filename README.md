@@ -1,3 +1,10 @@
+El presente documento Readme se ha creado en el marco de la actividad ACTIVIDAD 4. Taller “creación de una aplicación web”.
+de la asignatura HERRAMIENTAS DE SOFTWARE I – IS G01 impartida por el profesor: JEFERSON URREGO GUERRERO.  La actividad fue elaborada por el siguiente grupo:
+Camila Andrea Ardila
+Diego Fernando Lara
+Javier Dario Navarro.
+
+
 # Mi Tienda Online
 
 Aplicación web desarrollada con HTML, CSS y JavaScript que permite visualizar un resumen de pedido, seleccionar planes, consultar productos mediante una API y simular el proceso de compra y cancelación.
@@ -61,7 +68,7 @@ Se trabajaron aspectos como:
 
 ### Paso 3. Incorporación de funcionalidades con JavaScript
 
-Se creó el archivo `script.js` para dar interactividad a la aplicación.
+Se creó el archivo script.js para dar interactividad a la aplicación.
 
 Se implementaron funciones para:
 
@@ -97,9 +104,9 @@ La interfaz permite recorrer el flujo de confirmación, pero no está conectada a 
 
 Se separaron las responsabilidades principales en tres archivos:
 
-- `index.html`: estructura y contenido.
-- `style.css`: presentación visual.
-- `script.js`: comportamiento e interactividad.
+- index.html: estructura y contenido.
+- style.css: presentación visual.
+- script.js: comportamiento e interactividad.
 
 Esta organización facilita el mantenimiento, la identificación de errores y la incorporación de nuevas funcionalidades.
 
@@ -109,12 +116,11 @@ Se utilizó Git para registrar los cambios realizados durante el desarrollo.
 
 Los comandos principales utilizados para administrar el proyecto son:
 
-```bash
 git status
 git add .
 git commit -m "Describe el cambio realizado"
 git push
-```
+
 
 Estos comandos permiten revisar los cambios, prepararlos, crear una versión y enviarla al repositorio remoto.
 
@@ -139,7 +145,6 @@ El flujo de publicación consiste en:
 
 ## Estructura del proyecto
 
-```text
 mi-tienda-online/
 +-- images/
 ¦   +-- favicon-32x32.png
@@ -152,62 +157,26 @@ mi-tienda-online/
 +-- script.js
 +-- style.css
 +-- README.md
-```
 
-La carpeta `images` contiene los recursos gráficos del proyecto. Los archivos HTML, CSS y JavaScript conforman la aplicación principal.
+La carpeta images contiene los recursos gráficos del proyecto. Los archivos HTML, CSS y JavaScript conforman la aplicación principal.
 
 ## Cómo ejecutar el proyecto localmente
 
 1. Clonar el repositorio:
 
-```bash
+
 git clone https://github.com/jadantex/mi-tienda-online.git
-```
+
 
 2. Ingresar a la carpeta:
 
-```bash
 cd mi-tienda-online
-```
+
 
 3. Abrir la carpeta en Visual Studio Code:
 
-```bash
 code .
-```
 
-4. Abrir `index.html` en un navegador. También se puede utilizar la extensión Live Server de Visual Studio Code para ejecutar la página durante el desarrollo.
 
-## Pruebas recomendadas
+4. Abrir index.html en un navegador. También se puede utilizar la extensión Live Server de Visual Studio Code para ejecutar la página durante el desarrollo.
 
-Antes de publicar una nueva versión, se recomienda comprobar:
-
-- Que la página cargue correctamente.
-- Que los botones respondan a las acciones del usuario.
-- Que se pueda seleccionar y modificar el plan.
-- Que la consulta de productos muestre los estados correspondientes.
-- Que el usuario pueda confirmar o cancelar el pedido.
-- Que los formularios validen los campos obligatorios.
-- Que las ventanas modales se puedan cerrar correctamente.
-- Que la interfaz funcione en pantallas de diferentes tamaños.
-- Que el despliegue de Vercel termine correctamente.
-
-## Mejoras futuras
-
-Entre las posibles mejoras se encuentran:
-
-- Persistencia del carrito entre sesiones.
-- Incorporación de un catálogo con productos propios.
-- Implementación de un backend y una base de datos.
-- Autenticación de usuarios.
-- Integración de una pasarela de pagos real mediante un proveedor autorizado.
-- Pruebas automatizadas.
-- Mejoras de accesibilidad y experiencia de usuario.
-
-## Autor
-
-Proyecto desarrollado como ejercicio práctico de desarrollo web, utilizando tecnologías frontend y herramientas de control de versiones y despliegue.
-
----
-
-**Estado del proyecto:** aplicación web frontend con funcionalidades interactivas y proceso de compra simulado.
